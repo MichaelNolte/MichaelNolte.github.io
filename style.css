@@ -49,6 +49,7 @@ i {
     -o-background-size: cover;
     height: 100%;
     overflow: hidden;
+    background-position: fixed;
 }
 
 @media only screen and (min-width: 768px) {
