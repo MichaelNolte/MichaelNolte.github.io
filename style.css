@@ -42,6 +42,9 @@ i {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-attachment: fixed;
 }
 
@@ -353,6 +356,9 @@ h5 {
     border-radius: 5px;
 }
 
+.connect-icons>a>i:visited {
+	color: #ebe5e9;
+}
 .connect-icons>a>i:hover {
 	color: #4b6773;
 }
