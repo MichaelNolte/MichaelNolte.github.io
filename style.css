@@ -1,0 +1,389 @@
+/*global styles*/
+body {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	position: relative;
+	background: #4b6773;
+	height:100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+i {
+	color: #ebe5e9;
+	padding-top: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 0;
+
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.row {
+	padding-right: 0;
+	padding-left: 0;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+/*shadow around letters used on title and footer page*/
+.shadow-box {
+	color: #ebe5e9;
+	background-color: rgba(48,60,58,0.8);
+    margin: 0;
+}
+
+/*background-image on title and footer page*/
+.title-image {
+	min-height: 100vh;
+	background-image: url(images/stefan-muntwyler-web-xl_1680.jpg);
+	background-image: -webkit-image-set(url(images/stefan-muntwyler-web-xl_1680.jpg) 1x, url(images/stefan-muntwyler-web-xxxl_3072.jpg) 2x);
+    background-repeat: no-repeat;
+    background-position: center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/*nav menu*/
+.dropdown-button {
+    position: fixed;
+    right: 4%;
+    top: 5%;
+    z-index: 35;
+}
+
+.btn-default {
+	color: #ebe5e9;
+	background: rgba(48,60,58,0.8);
+	border: 0;
+	padding-top: 6px;
+	padding-bottom: 4px;
+	padding-right: 5px;
+	padding-left: 5px;
+	border-radius: 50%;
+}
+
+.btn-default:hover,
+.btn-default:active:hover {
+	color: #ebe5e9;
+	background: #303c3a;
+}
+
+.btn-default.active.focus,
+.btn-default.active:focus,
+.btn-default.focus,
+.btn-default:active.focus,
+.btn-default:active:focus,
+.btn-default:focus,
+.open>.dropdown-toggle.btn-default,
+.open>.dropdown-toggle.btn-default:hover,
+.open>.dropdown-toggle.btn-default:focus {
+    background: rgba(48,60,58,0.8);
+    outline: none;
+}
+
+/*content of nav menu*/
+.dropdown-menu {
+	font-size: 25px;
+	font-weight: 300;
+	width: 100%;
+	float: left;
+	background: rgba(48,60,58,0.8);
+	position: fixed !important;
+	display: block;
+	float: left;
+	left: 0;
+	top: 0;
+	display: none;
+	list-style: none;
+	border-radius: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	z-index: 20;
+	height: 100vh
+}
+
+.dropdown-menu>li {
+	background: rgba(48,60,58, 1);
+}
+
+.dropdown-menu>li>a {
+	color: #ebe5e9;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+
+}
+
+.dropdown-menu>li>a:hover {
+	color: #fbf3f1;
+	background-color: #4b6773;
+}
+
+.dropdown-menu>li.active>a {
+	background-color: rgba(114,118,113,0.3);
+}
+
+.dropdown-menu>li.active>a:hover {
+    background-color: #4b6773;
+    color: #fbf3f1;
+}
+
+.dropdown-menu .divider {
+	margin: 0;
+	padding: 0;
+	background-color: #4b6773;
+	opacity: 0.8;
+}
+
+/*text on title page*/
+.title-contours {
+	position: relative;
+	top: 20vh;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 35px;
+    padding-top: 15px;
+}
+
+h2 {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+/*title fonts on larger devices (title page)*/
+@media(min-width: 500px){
+
+	.title-contours {
+    	display: inline-block;
+    }
+
+	h1 {
+    	padding-left: 15px;
+    	padding-right: 15px;
+	    border-top-right-radius: 5px;
+    	border-top-left-radius: 5px;
+    }
+
+    h2 {
+    	padding-left: 15px;
+    	padding-right: 15px;
+    	border-bottom-right-radius: 5px;
+    	border-bottom-left-radius: 5px;
+	}
+}
+
+/*nav element on title page*/
+.scroll-down {
+	position: relative;
+	height: 45px;
+	background-color: #4b6773;
+	border: 0;
+	z-index: 25;
+	bottom: 45px;
+}
+
+.nav-icon {
+	padding-top: 3px;
+	padding-left: 0;
+}
+
+.nav-icon:hover {
+	background-color: #727682;
+}
+
+
+/*About*/
+/*layout intro text in about section*/
+.intro {
+	width: 100%;
+	color: #ebe5e9;
+	background-color: #4b6773;
+	min-height: 10vh;
+	padding-top: 2vh;
+	padding-bottom: 4%;
+	font-weight: 900;
+	padding-left: 8%;
+	padding-right: 8%;
+	margin-top: 45px;
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 3vmax;
+}
+
+/*button to open box with further information in about section*/
+.btn-info {
+	background: #4b6773;
+	border: 0;
+	color: #ebe5e9;
+	font-size: 2.5vw;
+	font-weight: 700;
+}
+
+.btn-info.active.focus,
+.btn-info.active:focus,
+.btn-info.focus,
+.btn-info:active.focus,
+.btn-info:active:focus,
+.btn-info:focus,
+.btn-info:hover,
+.btn-info:active:hover {
+    outline: 0;
+    color: #ebe5e9;
+    background: #4b6773;
+    border: 0;
+    box-shadow: none;
+}
+
+/*set font size for larger devices in about section*/
+@media(min-width: 917px) {
+
+	h3 {
+		font-size: 35px;
+	}
+
+	.btn-info {
+		font-size: 25px;
+	}
+}
+
+/*collapsable info-box in about section*/
+.about-me {
+	padding-top: 4vmax;
+	padding-bottom: 4vmax;
+}
+
+.about-me p {
+	font-weight: 300;
+}
+
+.portrait {
+   padding-top: 7vmax;
+}
+
+.portrait img {
+	max-width: 70px;
+}
+
+/*style about-me-box for larger screens (about section)*/
+@media(min-width: 600px) {
+	.about-me {
+		padding-top: 7vmax;
+		padding-bottom: 3vmax;
+	}
+
+	.about-me p {
+		font-size: 18px;
+	}
+
+	.portrait img {
+		max-width: 90px;
+	}
+
+	.portrait {
+   		padding-top: 7vmax;
+	}
+}
+
+
+/*Projects*/
+.filled-column {
+	position: relative;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.description {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	min-height: 100%;
+	background: #4b6773;
+	color: #ebe5e9;
+	opacity: 0;
+}
+
+/*hover description on project image*/
+.filled-column:hover .description {
+	opacity: 0.8;
+}
+
+
+/*Footer*/
+.footer-content {
+	height: 100vh;
+}
+
+/*contact part of footer section*/
+.text-contours {
+	margin-top: 10vh;
+	position: relative;
+    display: inline-block;
+    margin-left: 15vw;
+    margin-right: 15vw
+}
+
+h4 {
+	font-weight: 700;
+	font-size: 35px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+h5 {
+	font-weight: 300;
+	font-size: 20px;
+	padding: 10px;
+    border-radius: 5px;
+}
+
+.connect-icons {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.connect-icons>a>i:hover {
+	color: #4b6773;
+}
+
+/*copyright box in footer section*/
+.copyright-content {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	background-color: #4b6773;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	color: #ebe5e9;
+}
+
+.copyright-content p {
+	font-size: 10px;
+	margin-bottom: 0;
+	font-weight: 300;
+}
+
+.copyright-content a:link {
+    color: #ebe5e9;
+}
+.copyright-content a:visited {
+	color: #ebe5e9;
+}
+.copyright-content a:hover {
+	color: #ebe5e9;
+	opacity: 0.5;
+}
