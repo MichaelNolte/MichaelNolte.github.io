@@ -5,8 +5,6 @@ body {
 	position: relative;
 	background: #4b6773;
 	height:100%;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 
 i {
@@ -45,7 +43,7 @@ i {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
 }
 
 
