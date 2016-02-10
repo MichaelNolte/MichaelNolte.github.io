@@ -51,6 +51,13 @@ i {
     overflow: hidden;
 }
 
+@media only screen and (min-width: 768px) {
+	.title-image {
+        background-attachment: fixed;
+    }
+}
+
+
 
 /*nav menu*/
 .dropdown-button {
