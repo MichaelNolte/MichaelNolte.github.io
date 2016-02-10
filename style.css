@@ -4,6 +4,8 @@ body {
 	text-align: center;
 	position: relative;
 	background: #4b6773;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 i {
@@ -46,6 +48,7 @@ i {
     -moz-background-size: cover;
     -o-background-size: cover;
     height: 100%;
+    overflow: hidden;
 }
 
 
@@ -147,6 +150,8 @@ i {
 .title-contours {
 	position: relative;
 	top: 20vh;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 h1 {
