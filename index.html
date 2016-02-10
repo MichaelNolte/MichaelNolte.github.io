@@ -34,9 +34,10 @@
 
       <div id="title-page"> <!-- first section: page title -->
         <div class="title-image">
-        <div class="title-contours">
-          <h1 class="shadow-box">web development portfolio</h1>
-          <h2 class="shadow-box">michael nolte</h2>
+          <div class="title-contours">
+            <h1 class="shadow-box">web development portfolio</h1>
+            <h2 class="shadow-box">michael nolte</h2>
+          </div>
         </div>
 
         <div class="row scroll-down nav-element"><!-- nav element indicating that page is scrollable-->
@@ -215,12 +216,6 @@
         $(this).text(function(i,old){
           return old=='read more -' ?  'read more +' : 'read more -';
         });
-      });
-    </script>
-    <script>
-      $(window).scroll(function(){
-        var scrolledY = $(window).scrollTop();
-        $('.title-image').css('background-position', 'left ' + ((scrolledY)) + 'px');
       });
     </script>
 
