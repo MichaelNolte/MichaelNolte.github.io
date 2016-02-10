@@ -4,7 +4,6 @@ body {
 	text-align: center;
 	position: relative;
 	background: #4b6773;
-	height:100%;
 }
 
 i {
@@ -119,6 +118,7 @@ i {
 
 }
 
+.dropdown-menu>li.active>a:hover,
 .dropdown-menu>li>a:hover {
 	color: #fbf3f1;
 	background-color: #4b6773;
@@ -128,16 +128,16 @@ i {
 	background-color: rgba(114,118,113,0.3);
 }
 
-.dropdown-menu>li.active>a:hover {
-    background-color: #4b6773;
-    color: #fbf3f1;
-}
-
 .dropdown-menu .divider {
 	margin: 0;
 	padding: 0;
 	background-color: #4b6773;
 	opacity: 0.8;
+}
+
+/* make dropdown work on mobile*/
+.dropdown-backdrop {
+    position: static;
 }
 
 /*text on title page*/
