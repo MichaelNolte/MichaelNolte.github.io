@@ -34,11 +34,18 @@
 
       <div id="title-page"> <!-- first section: page title -->
         <div class="title-image">
-          <div class="title-contours">
-            <h1 class="shadow-box">web development portfolio</h1>
-            <h2 class="shadow-box">michael nolte</h2>
-          </div>
+        <div class="title-contours">
+          <h1 class="shadow-box">web development portfolio</h1>
+          <h2 class="shadow-box">michael nolte</h2>
         </div>
+
+        <script type="text/javascript">
+          $(window).scroll(function() {
+  var scrolledY = $(window).scrollTop();
+  $('#container').css('background-position', 'left ' + ((scrolledY)) + 'px');
+});
+
+        </script>
 
         <div class="row scroll-down nav-element"><!-- nav element indicating that page is scrollable-->
           <div class="row">
