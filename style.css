@@ -4,8 +4,6 @@ body {
 	text-align: center;
 	position: relative;
 	background: #4b6773;
-	overflow: scroll;
-	-webkit-overflow-scrolling: touch;
 }
 
 i {
@@ -36,27 +34,18 @@ i {
     margin: 0;
 }
 
-
-#title-page {
-	width: 100%
-	height: calc(100vh - 45px);
-}
-
-
 /*background-image on title and footer page*/
 .title-image {
 	min-height: 100vh;
-	height: 100%;
 	background-image: url(images/stefan-muntwyler-web-xl_1680.jpg);
 	background-image: -webkit-image-set(url(images/stefan-muntwyler-web-xl_1680.jpg) 1x, url(images/stefan-muntwyler-web-xxxl_3072.jpg) 2x);
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: center;
     background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-attachment: fixed !important;
+    background-attachment: fixed;
+    overflow: hidden;
 }
+
 
 /*nav menu*/
 .dropdown-button {
@@ -156,8 +145,6 @@ i {
 .title-contours {
 	position: relative;
 	top: 20vh;
-	overflow: scroll;
-	-webkit-overflow-scrolling: touch;
 }
 
 h1 {

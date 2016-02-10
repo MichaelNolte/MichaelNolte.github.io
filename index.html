@@ -9,10 +9,40 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:700,300' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href= "style.css">
+    <script type="text/javascript" src="bootstrap/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
 	</head>
 
   <body data-spy="scroll" data-target="#myScrollspy">
+
+    <!-- script adds smooth scrolling -->
+    <script>
+      $(document).ready(function(){
+        // Add scrollspy to <body>
+        $('body').scrollspy({target: ".nav-element", offset: 50});
+
+        // Add smooth scrolling on all links inside the navbar
+        $(".nav-element a").on('click', function(event) {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        });
+      });
+    </script>
 
     <nav class="dropdown-button nav-element" id="myScrollspy"> <!-- menu icon on right top of page-->
       <button id="dLabel" type="button" class="btn btn-default dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -34,18 +64,11 @@
 
       <div id="title-page"> <!-- first section: page title -->
         <div class="title-image">
-        <div class="title-contours">
-          <h1 class="shadow-box">web development portfolio</h1>
-          <h2 class="shadow-box">michael nolte</h2>
+          <div class="title-contours">
+            <h1 class="shadow-box">web development portfolio</h1>
+            <h2 class="shadow-box">michael nolte</h2>
+          </div>
         </div>
-
-        <script type="text/javascript">
-          $(window).scroll(function() {
-  var scrolledY = $(window).scrollTop();
-  $('#container').css('background-position', 'left ' + ((scrolledY)) + 'px');
-});
-
-        </script>
 
         <div class="row scroll-down nav-element"><!-- nav element indicating that page is scrollable-->
           <div class="row">
@@ -67,6 +90,15 @@
           <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
           read more +
           </button> <!-- button to expand section for more information -->
+
+          <!-- change text in button on click -->
+          <script>
+          $('.btn-info').click(function(){
+            $(this).text(function(i,old){
+              return old=='read more -' ?  'read more +' : 'read more -';
+            });
+          });
+          </script>
 
           <div id="demo" class="collapse"><!-- expanded information -->
             <div class="row">
@@ -188,44 +220,4 @@
       </footer>
     </div>
   </body>
-
-  <!-- script adds smooth scrolling -->
-    <script>
-      $(document).ready(function(){
-        // Add scrollspy to <body>
-        $('body').scrollspy({target: ".nav-element", offset: 50});
-
-        // Add smooth scrolling on all links inside the navbar
-        $(".nav-element a").on('click', function(event) {
-
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function(){
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        });
-      });
-    </script>
-
-    <!-- change text in button on click -->
-    <script>
-      $('.btn-info').click(function(){
-        $(this).text(function(i,old){
-          return old=='read more -' ?  'read more +' : 'read more -';
-        });
-      });
-    </script>
-
-    <script type="text/javascript" src="bootstrap/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </html>
